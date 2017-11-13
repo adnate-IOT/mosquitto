@@ -7,7 +7,7 @@ var net = require('net');
 var mqtt = require('mqtt');
  
 var io  = require('socket.io').listen(5000);
- var client = mqtt.connect('mqtt://35.154.89.209:1883');
+ var client = mqtt.connect('mqtt://IP:PORT');
 
 console.log("connected to AdnateIot broker");
 
@@ -79,10 +79,10 @@ var mongodb=require('mongodb');
 var mqtt=require('mqtt')  
 var mongodb=require('mongodb');  
 var mongodbClient=mongodb.MongoClient;  
-var mongodbUrl='mongodb://pFacADM:adnate%4016%2f09@35.154.237.104:27056/IOT?authSource=admin'  //AdnateIotSignup DB name
+var mongodbUrl='mongodb://IP:PORT/IOT?authSource=admin'  //AdnateIotSignup DB name
 var deviceRoot="#"  
 var collection,client; 
-var BrokerUrl = 'mqtt://13.126.36.205:1883';
+var BrokerUrl = 'mqtt://IP:PORT';
 mongodbClient.connect(mongodbUrl,setupCollection);
 
 
